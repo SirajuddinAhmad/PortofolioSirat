@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sirajuddin Ahmad Kurniawan — Web Developer & Designer</title>
+    <meta
+      name="description"
+      content="Portofolio Sirajuddin Ahmad Kurniawan — Web Developer, IT Support, dan Graphic Designer. Membangun aplikasi web, sistem arsip digital, dan landing page yang cepat, rapi, dan bermakna."
+    />
+    <meta name="author" content="Sirajuddin Ahmad Kurniawan" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sirajuddin Ahmad Kurniawan — Web Developer & Designer" />
+    <meta
+      property="og:description"
+      content="Web Developer, IT Support, dan Graphic Designer. Lihat proyek, keahlian, dan pengalaman saya."
+    />
+    <meta property="og:image" content="/projects/edms.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Set the theme before paint so the page never flashes the wrong colors.
+      (function () {
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
